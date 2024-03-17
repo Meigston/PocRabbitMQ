@@ -1,0 +1,6 @@
+@PocRabbitMq_HostAddress = http://localhost:5188
+
+GET {{PocRabbitMq_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
