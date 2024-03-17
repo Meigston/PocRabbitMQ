@@ -10,7 +10,7 @@
 
         public RabbitMQPublisher()
         {
-            var factory = new ConnectionFactory() { HostName = "localhost", Port = 5672, VirtualHost = "/", UserName = "fjsadmin", Password = "Fujitsu@2022" }; // Change as needed
+            var factory = new ConnectionFactory() { HostName = "localhost", Port = 5672, VirtualHost = "/", UserName = "your_user_name", Password = "your_password" }; // Change as needed
             _connection = factory.CreateConnection();
             _channel = _connection.CreateModel();
 
