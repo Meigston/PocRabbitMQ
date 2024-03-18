@@ -25,6 +25,6 @@ namespace PocRabbitMq.Controllers
     public class PublishRequest
     {
         public string RoutingKey { get; set; }
-        public string Message { get; set; }
+        public object Message { get; set; }
     }
 }
