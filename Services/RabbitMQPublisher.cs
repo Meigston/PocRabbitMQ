@@ -1,7 +1,9 @@
 ﻿namespace PocRabbitMq.Services
 {
+    using Microsoft.Extensions.Logging;
     using RabbitMQ.Client;
     using System.Text;
+    using System.Text.Json;
 
     public class RabbitMQPublisher
     {
@@ -18,9 +20,9 @@
             //_channel.ExchangeDeclare(exchange: "YOUR_exchange_topic_example", type: ExchangeType.Topic);
         }
 
-        public void PublishMessage(string routingKey, string message)
+        public void PublishMessage(string routingKey, object message)
         {
-            var body = Encoding.UTF8.GetBytes(message);
+            var body = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(message));
 
             _channel.BasicPublish(exchange: "YOUR_exchange_topic_example",
                 routingKey: routingKey,
