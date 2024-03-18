@@ -1,5 +1,3 @@
----
-
 # RabbitMQ with .NET - Quick Start Guide
 
 This guide outlines how to set up and use a basic message publishing and consuming system using RabbitMQ in a .NET WebAPI application. It includes using Docker Compose for running RabbitMQ.
